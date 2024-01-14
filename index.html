@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book maker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="image/bookmark-solid.svg">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container py-5 ">
+        <div class="title mb-5 d-flex justify-content-center flex-column text-center align-items-center">
+            <h1>Bookmarker</h1>
+            <br>
+            <br>
+            <br>
+
+        </div>
+
+        <div class="cont mb-5 position-relative">
+            <div class="errorMessage position-absolute d-none">
+                <p class="mt-5">invalid site URL or site name check your input value </p>
+                <button id="boxError">OK</button>
+            </div>
+            <h2 class="text-center mb-5"><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites<i
+                    class="fa-solid fa-bookmark"></i></h2>
+
+            <div class="form-group mb-3">
+                <label for="SiteName" class=" mb-2"><i class="fa-solid fa-book-bookmark"></i> Site Name :</label>
+                <input type="text" onkeyup="validateSiteName()" class="  px-3 " id="SiteName"
+                    placeholder=" Bookmarker Name">
+                <i id="validIcon" class="fas fa-check fa-2xl d-none"></i>
+                <i id="inValidIcon" class="fass fa-solid fa-xmark fa-2xl d-none"></i>
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="SiteURL" class=" mb-2"><i class="fa-solid fa-link"></i> Site URL :</label>
+                <input onkeyup="validateSiteURL()" type="text" class="  px-3 " id="SiteURL" placeholder="Website URL">
+                <i id="validURL" class="fas fa-check fa-2xl d-none"></i>
+                <i id="inValidURL" class="fass fa-solid fa-xmark fa-2xl d-none"></i>
+                <P id="wrongSiteURL" class="mt-2 rounded-5 text-center p-3 fs-4  d-none">Make sure that your URL begins
+                    with(www.) and ends with(.com) </P>
+            </div>
+
+            <button id="myBtn" onclick="addSites()"
+                class="subBtn btn mb-4 position-relative start-50 translate-middle-x">Submit</button>
+        </div>
+
+        <div class="gadwal w-100">
+            <table class="table table-secondary text-center">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delet</th>
+                </thead>
+                <tbody id="tBody">
+
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

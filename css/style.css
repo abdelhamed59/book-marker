@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #65451F;
+}
+
+
+
+.title h1{
+    font-family: 'Pacifico', cursive;
+    color: #EAC696;
+    font-size: 50px;
+    isolation: isolate;
+    position: relative;
+    
+}
+.title h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 0;
+    background-color: #C8AE7D;
+   
+    transition: height 1s;
+    z-index: -1;
+}
+.title h1:hover::before{
+    height: 75%;
+}
+.title{
+    border-bottom: 3px dotted wheat;
+}
+.container h2{
+    background-image: linear-gradient(to right, #5C4033,400px, #EAC696,#EAC696 );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+label{
+    color: #EAC696;
+    font-size: 20px;
+}
+input{
+    background: #C8AE7D ;
+   outline: none ;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1d3200;
+    background-clip: padding-box;
+    border: 1px solid #C8AE7D;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+input:focus{
+    border: 3px solid wheat;
+    box-shadow: 0 0 10px #ced4dc;
+}
+.subBtn{
+    background: linear-gradient( #5C4033 , #EAC696,#5C4033 );
+    width: 10em;
+    padding: 15px;
+    color: #5C4033;
+    font-size: 24px;
+    transition: all 2s ease;
+}
+.subBtn:hover{
+    background: linear-gradient( #EAC696 , #5C4033,#EAC696 );
+    color:#C8AE7D;
+}
+.cont{
+    border-bottom: 5px dotted wheat;
+}
+
+
+ 
+.deletBtn,
+.visitBtn{
+    width: 80px;
+    height: 40px;
+    background-color: #5C4033;
+    border: 4px solid #C8AE7D;
+    color: #EAC696;
+    
+}
+.visitBtn a{
+    text-decoration: none;
+    color: #C8AE7D;
+}
+.form-group{
+    position: relative;
+}
+.form-group .fas{
+    position: absolute;
+    right: 20px;
+    top: 57px;
+    color: green;
+}
+.form-group .fass{
+    position: absolute;
+    right: 20px;
+    top: 57px;
+    color: red;
+}
+#wrongSiteURL{
+    background-color: #C8AE7D;
+    color: #5C4033;
+}
+.errorMessage{
+    background-color: #C8AE7D;
+    width: 50%;
+    height: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #5C4033;
+    font-size: 24px;
+    flex-direction: column;
+    z-index: 1;
+}
+
+@media screen and (max-width:600px) {
+    .errorMessage{
+        width: 100%;
+    }
+}
+.errorMessage button{
+    width: 100px;
+    height: 60px;
+    background-color: #5C4033;
+    border: 3px solid #1d3200;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: #C8AE7D;
+    transition: all 1s ease;
+}
+#boxError:hover{
+    background-color: #1d3200;
+
+}
+
+
+
+
